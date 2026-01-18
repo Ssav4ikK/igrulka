@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 10px 80px;
+    background-color: rgb(21, 18, 18);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: rgb(41, 41, 41);
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.4),
+        inset 100px 100px 1000px rgba(0, 0, 0, 0.5);
+}
+
+.tables-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+table {
+    width: 95%;
+    max-width: 620px;
+    min-width: 480px;
+    border: none;
+    border-collapse: collapse;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+caption {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+td {
+    padding: 13px 18px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none !important;
+}
+
+tr:first-child td {
+    font-weight: bold;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+tr:not(:first-child):hover td {
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: background-color 0.3s ease;
+}
+
+#table-red { box-shadow: 0 15px 40px rgba(205, 92, 92, 0.4); }
+#table-pink { box-shadow: 0 15px 40px rgba(255, 192, 203, 0.4); }
+#table-orange { box-shadow: 0 15px 40px rgba(255, 165, 0, 0.4); }
+#table-yellow { box-shadow: 0 15px 40px rgba(255, 242, 0, 0.4); }
+#table-purple { box-shadow: 0 15px 40px rgba(147, 112, 219, 0.4); }
+#table-blue { box-shadow: 0 15px 40px rgba(70, 130, 180, 0.4); }
+#table-white { box-shadow: 0 15px 40px rgba(255, 255, 255, 0.4); }
+#table-gray { box-shadow: 0 15px 40px rgba(128, 128, 128, 0.4); }
+#table-green { box-shadow: 0 15px 40px rgba(60, 179, 113, 0.4); }
+
+.tables-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+.tables-wrapper::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+.tables-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.3);
+    border-radius: 4px;
+}

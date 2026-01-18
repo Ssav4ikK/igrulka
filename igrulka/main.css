@@ -1,0 +1,205 @@
+body {
+  margin: 0;
+  background: #111;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+header {
+  height: 400px;
+  background: url("first.png") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 90px rgba(0,0,0,0.9);
+}
+header h1 {
+  font-size: 56px;
+  font-family: Impact, fantasy;
+  transform: scaleY(1.3);
+  text-shadow: 0 0 20px rgba(255,255,255,0.8);
+}
+
+.top-nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px 24px;
+  background: rgba(17, 17, 17, 0.8);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(177, 156, 217, 0.25);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.top-nav a {
+  color: #b19cd9;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.top-nav a:hover {
+  color: #fff;
+}
+
+@keyframes borderGlow {
+  0% { box-shadow: 0 0 10px #6a0dad; border-color: #6a0dad; }
+  50% { box-shadow: 0 0 20px #8a2be2; border-color: #8a2be2; }
+  100% { box-shadow: 0 0 10px #6a0dad; border-color: #6a0dad; }
+}
+.section {
+  margin: 40px 0;
+  padding: 20px;
+  border: 2px solid #6a0dad;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+  animation: borderGlow 3s infinite;
+}
+.section h2 {
+  color: #b19cd9;
+  margin-bottom: 10px;
+}
+.section:hover{
+  transform: scale(1.02);
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+.card-track {
+  display: flex;
+  gap: 40px;
+  transition: transform 0.5s ease;
+  padding: 20px 0;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px) scale(0.95); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes neonPulse {
+  0% { box-shadow: 0 0 20px #8a2be2, 0 0 40px #6a0dad; }
+  50% { box-shadow: 0 0 30px #8a2be2, 0 0 60px #6a0dad, 0 0 90px #4b0082; }
+  100% { box-shadow: 0 0 20px #8a2be2, 0 0 40px #6a0dad; }
+}
+
+.card {
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  flex-shrink: 0;
+  overflow: visible;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.card:hover .card-inner {
+  transform: rotateX(180deg) scale(1.05);
+}
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 0;
+  overflow: hidden;
+  background: transparent;
+}
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.name {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  text-shadow: 0 0 5px black;
+  z-index: 2;
+}
+.card-back {
+  color: #b19cd9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transform: rotateX(180deg);
+}
+.role {
+  padding: 20px;
+  text-align: center;
+}
+
+
+.card.active .card-inner {
+  border: 2px solid #8a2be2;
+  animation: neonPulse 2s infinite;
+}
+
+
+.nav {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid #b19cd9;
+  background: transparent;
+  color: white;
+  font-size: 28px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+.nav.left { left: 10px; }
+.nav.right { right: 10px; }
+.nav:hover {
+  background: rgba(177,156,217,0.2);
+  transform: translateY(-50%) scale(1.05);
+}
+.nav:active {
+  transform: translateY(-50%) scale(0.98);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  font-size: 14px;
+  color: #aaa;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 32px;
+  }
+  .card {
+    width: 200px;
+    height: 200px;
+  }
+  .top-nav {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 16px;
+  }
+  .top-nav a {
+    font-size: 14px;
+  }
+}

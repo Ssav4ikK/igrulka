@@ -1,0 +1,43 @@
+﻿Сборка начата 16.01.2026 15:30:20.
+Уровень детализации журнала: Normal.     1>Проект "D:\BSTU\igrulka\igrulka\igrulka.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
+         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+       InitializeBuildStatus:
+         Создание "x64\Debug\igrulka.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+         Обращение к "x64\Debug\igrulka.tlog\unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++17 /permissive- /Fo"x64\Debug\\" /Fd"x64\Debug\vc143.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt guess.cpp
+         guess.cpp
+       Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\BSTU\igrulka\x64\Debug\igrulka.exe" /INCREMENTAL /ILK:"x64\Debug\igrulka.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\BSTU\igrulka\x64\Debug\igrulka.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\BSTU\igrulka\x64\Debug\igrulka.lib" /MACHINE:X64 x64\Debug\engine.obj
+         x64\Debug\background.obj
+         x64\Debug\color.obj
+         x64\Debug\commands.obj
+         x64\Debug\cosmetics.obj
+         x64\Debug\formula1.obj
+         x64\Debug\guess.obj
+         x64\Debug\igrulka.obj
+         x64\Debug\link.obj
+         x64\Debug\math.obj
+         x64\Debug\menu.obj
+         x64\Debug\Multiplayer.obj
+         x64\Debug\probnik.obj
+         x64\Debug\random.obj
+         x64\Debug\randomevent.obj
+         x64\Debug\randomgame1.obj
+         x64\Debug\rockpaper.obj
+         x64\Debug\Rules.obj
+         x64\Debug\solo.obj
+         x64\Debug\tictoe.obj
+         x64\Debug\with_bot.obj
+         igrulka.vcxproj -> D:\BSTU\igrulka\x64\Debug\igrulka.exe
+       FinalizeBuildStatus:
+         Файл "x64\Debug\igrulka.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "x64\Debug\igrulka.tlog\igrulka.lastbuildstate".
+     1>Сборка проекта "D:\BSTU\igrulka\igrulka\igrulka.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+    Предупреждений: 0
+    Ошибок: 0
+
+Прошло времени 00:00:03.19
